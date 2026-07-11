@@ -23,7 +23,7 @@ export type Project = {
 export const experiences: Experience[] = [
   {
     company: "Acquiso inc",
-    role: "Full Stack & AI Engineer",
+    role: "Co-founder & Full Stack/AI Engineer",
     dates: "2024 — 2026",
     location: "Montréal, CA",
     signal: "AI → production",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     shortTitle: "Learned canonicalization",
     label: "Robust visual learning",
     description:
-      "Instead of forcing invariance, learn the canonical view. Then pressure-test what robustness actually survives.",
+      "Instead of forcing invariance, learn the canonical view and evaluate generalization under distribution shifts.",
     proof: [
       "Trained PRLC models with ResNet50 and ViT backbones.",
       "Extended the work with ablations and a Spatial Transformer Network.",

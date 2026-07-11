@@ -41,7 +41,7 @@ app.innerHTML = `
       <span>AG</span><i></i>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#work">Work</a>
+      <a href="#work">Projects</a>
       <a href="#experience">Timeline</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -53,53 +53,54 @@ app.innerHTML = `
   <main id="top">
     <section class="hero section-shell" aria-labelledby="hero-title">
       <div class="hero-status mono reveal">
-        <span><i></i> EU + Canada work rights</span>
         <span>Delft, NL · 52.01° N</span>
       </div>
 
-      <div class="hero-copy">
-        <p class="eyebrow reveal">Software engineer · AI researcher</p>
-        <h1 id="hero-title" class="reveal">
-          <span>BUILDING SYSTEMS</span>
-          <span>THAT <em id="hero-verb">SEE</em><b>.</b></span>
-        </h1>
-        <div class="hero-lower reveal">
-          <p>MSc AI @ TU Delft. Full-stack systems, computer vision, and data security.</p>
-          <div class="hero-actions">
-            <a class="button button--primary magnetic" href="#work">Explore work <span>↘</span></a>
-            <a class="text-link magnetic" href="mailto:aghiles.gasselin@gmail.com">Start a conversation <span>↗</span></a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Software engineer · AI researcher</p>
+          <h1 id="hero-title" class="reveal">Aghilès Gasselin</h1>
+          <div class="hero-lower reveal">
+            <p class="hero-bio">
+              I build things to make life work better/faster for other people (also me!) and I love doing it.
+              During a past software internship, I'd stay late at the office purely because the problem was too interesting to leave. 
+              After 1.5 years at Deloitte, I craved that thrill again, so I co-founded two startups on the side (including Acquiso, and a new one currently in the works) where I could build without stopping. 
+              I spend a big part of my days optimising what is around me, flying FPV drones (and spending half the time repairing them), and studying/learning about biology as a second hobby. 
+              I want to build things that are difficult, useful, and slightly obsessive :). Especially in AI, where the possibilities to create impact are infinite.
+            </p>
+            <p class="hero-credentials">MSc AI @ TU Delft · Full-stack systems, computer vision, data security · <span class="work-rights"><i class="dot"></i> EU + Canada work rights</span></p>
+            <div class="hero-actions">
+              <a class="button button--primary magnetic" href="#work">Explore projects <span>↘</span></a>
+              <a class="text-link magnetic" href="mailto:aghiles.gasselin@gmail.com">Start a conversation <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-education reveal">
+          <div class="edu-card">
+            <span class="edu-date">2025 — 2027 / DELFT, NL</span>
+            <h3>MSc · Data Science & AI</h3>
+            <p class="edu-school">TU Delft</p>
+            <div class="edu-tags"><span>Visual computing</span><span>Advanced ML</span><span>Generative modeling</span></div>
+          </div>
+          <div class="edu-card">
+            <span class="edu-date">2019 — 2024 / MONTRÉAL, CA</span>
+            <h3>BEng · Software Engineering</h3>
+            <p class="edu-school">Polytechnique Montréal</p>
+            <div class="edu-tags"><span>Software systems</span><span>Robotics</span><span>Security</span></div>
           </div>
         </div>
       </div>
 
-      <div class="hero-orbit" aria-hidden="true">
-        <div class="orbit orbit--outer"><i></i><i></i></div>
-        <div class="orbit orbit--middle"><i></i></div>
-        <div class="orbit orbit--inner"></div>
-        <div class="core"><span>AI</span><small>×</small><span>SW</span></div>
-        <p>RESEARCH / BUILD / SHIP</p>
-      </div>
-
       <div class="hero-index mono reveal">
-        <span>Scroll to decode</span>
         <div></div>
-        <span>01 — 04</span>
-      </div>
-    </section>
-
-    <section class="facts section-shell" aria-label="Selected facts">
-      <div class="signal-strip reveal">
-        <div><strong data-count="500">0</strong><span>+ servers mapped</span></div>
-        <div><strong>3</strong><span>countries</span></div>
-        <div><strong>1</strong><span>Nature paper</span></div>
-        <div><strong>4</strong><span>engineering domains</span></div>
+        <span>01 — 03</span>
       </div>
     </section>
 
     <section id="work" class="projects section-shell" aria-labelledby="work-title">
       <div class="section-heading reveal">
-        <p class="section-kicker"><span>01</span> Projects</p>
-        <h2 id="work-title">Selected<br><em>work.</em></h2>
+        <h2 id="work-title">Selected <em>projects.</em></h2>
       </div>
       <div class="project-list">
         ${projects
@@ -130,8 +131,7 @@ app.innerHTML = `
 
     <section id="experience" class="experience section-shell" aria-labelledby="experience-title">
       <div class="experience-intro reveal">
-        <p class="section-kicker"><span>02</span> Work history</p>
-        <h2 id="experience-title">Experience.</h2>
+        <h2 id="experience-title">Work <em>experience.</em></h2>
       </div>
       <div class="timeline">
         ${experiences
@@ -164,49 +164,48 @@ app.innerHTML = `
       </a>
     </section>
 
-    <section class="education section-shell" aria-labelledby="education-title">
-      <p class="section-kicker reveal"><span>03</span> Education</p>
-      <div class="education-grid">
-        <div class="reveal">
-          <h2 id="education-title">Still<br>loading.</h2>
-        </div>
-        <article class="education-card reveal">
-          <span class="mono">2025 — 2027 / DELFT, NL</span>
-          <h3>MSc · Data Science & Artificial Intelligence</h3>
-          <p>TU Delft</p>
-          <div><span>Visual computing</span><span>Advanced ML</span><span>Generative modeling</span></div>
-        </article>
-        <article class="education-card reveal">
-          <span class="mono">2019 — 2024 / MONTRÉAL, CA</span>
-          <h3>BEng · Software Engineering</h3>
-          <p>Polytechnique Montréal</p>
-          <div><span>Software systems</span><span>Robotics</span><span>Security</span></div>
-        </article>
-      </div>
-    </section>
-
     <section class="offscreen section-shell" aria-labelledby="offscreen-title">
-      <div class="offscreen-title reveal">
-        <p class="section-kicker"><span>04</span> Outside work</p>
-        <h2 id="offscreen-title">Human,<br>not a model.</h2>
-      </div>
-      <div class="offscreen-grid">
-        <article class="hobby hobby--music tilt reveal">
-          <span class="mono">01 / SOUND</span><h3>Guitar · 8 years<br>Piano · 3 years</h3>
-          <div class="wave" aria-hidden="true">${Array.from({ length: 24 }, (_, index) => `<i style="--i:${index}"></i>`).join("")}</div>
-        </article>
-        <article class="hobby hobby--drone tilt reveal">
-          <span class="mono">02 / FLIGHT</span><h3>Build. Fly. Crash.<br>Repeat.</h3>
-          <div class="drone" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
-        </article>
-        <article class="hobby hobby--chess tilt reveal">
-          <span class="mono">03 / STRATEGY</span><h3>Chess &<br>board games</h3>
-          <div class="chess" aria-hidden="true">♞</div>
-        </article>
-        <article class="languages reveal">
-          <span class="mono">LANGUAGE LAYER</span>
-          <div><strong>FR</strong><span>Native</span></div><div><strong>EN</strong><span>C2</span></div><div><strong>KO</strong><span>A2</span></div>
-        </article>
+      <div class="offscreen-layout">
+        <div class="offscreen-info reveal">
+          <h2 id="offscreen-title">Outside <em>work.</em></h2>
+          <p class="offscreen-lead">Beyond building software systems, I'm driven by hands-on execution, continuous learning, and creative outlets.</p>
+          <div class="languages-inline">
+            <span class="mono">Languages:</span>
+            <strong>FR</strong> <span>Native</span> · 
+            <strong>EN</strong> <span>C2</span> · 
+            <strong>KO</strong> <span>A2</span>
+          </div>
+        </div>
+        <div class="offscreen-hobbies reveal">
+          <div class="hobby-pill hobby-pill--music">
+            <span class="hobby-icon">🎵</span>
+            <div class="hobby-text">
+              <h4>Sound</h4>
+              <p>Guitar & Piano study</p>
+            </div>
+          </div>
+          <div class="hobby-pill hobby-pill--drone">
+            <span class="hobby-icon">🛸</span>
+            <div class="hobby-text">
+              <h4>FPV Flight</h4>
+              <p>Building & repairing drones</p>
+            </div>
+          </div>
+          <div class="hobby-pill hobby-pill--sports">
+            <span class="hobby-icon">🏃</span>
+            <div class="hobby-text">
+              <h4>Athletics</h4>
+              <p>Hiking, basketball, badminton</p>
+            </div>
+          </div>
+          <div class="hobby-pill hobby-pill--chess">
+            <span class="hobby-icon">♟️</span>
+            <div class="hobby-text">
+              <h4>Strategy</h4>
+              <p>Chess & board games</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -214,7 +213,7 @@ app.innerHTML = `
   <footer id="contact" class="footer section-shell">
     <div class="footer-top reveal">
       <p class="section-kicker"><span>→</span> Open channel</p>
-      <h2>Have a hard<br>problem?</h2>
+      <h2>Have a hard problem?</h2>
       <a class="footer-email magnetic" href="mailto:aghiles.gasselin@gmail.com">aghiles.gasselin@gmail.com <span>↗</span></a>
     </div>
     <div class="footer-bottom mono">
@@ -229,13 +228,13 @@ app.innerHTML = `
     <form method="dialog"><button aria-label="Close quick navigation">×</button></form>
     <p id="command-title" class="mono">QUICK JUMP</p>
     <nav>
-      <a href="#work"><span>01</span>Selected work <kbd>W</kbd></a>
+      <a href="#work"><span>01</span>Selected projects <kbd>W</kbd></a>
       <a href="#experience"><span>02</span>Experience <kbd>E</kbd></a>
       <a href="#contact"><span>03</span>Contact <kbd>C</kbd></a>
     </nav>
     <small class="mono">ESC TO CLOSE</small>
   </dialog>
-  <div class="toast" role="status" aria-live="polite">Signal copied.</div>
+  <div class="toast" role="status" aria-live="polite">signal copied.</div>
 `;
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
