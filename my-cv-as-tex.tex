@@ -1,0 +1,254 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage[scale=0.90,lf]{FiraMono}
+\usepackage[normalem]{ulem}
+
+\renewcommand{\ULdepth}{1.8pt}
+\newcommand{\myuline}[1]{\uline{#1}}
+
+% Helvetica-style font
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}
+  {\bfseries\large\raggedright}
+  {}
+  {0em}
+  {}
+  [\vspace{1pt}\hrule height 2pt \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2}\vspace{1pt}\\
+      \textit{#3} & {\small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Aghilès Gasselin} \\ \vspace{5pt}
+    \small 
+    \faPhone* \hspace{2pt} \texttt{+31.6.34.69.55.11} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:aghiles.gasselin@gmail.com}{\texttt{aghiles.gasselin@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Delft, Netherlands}
+    \\ \vspace{3pt}
+    \small
+    \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/aghiles-gasselin/}{\texttt{www.linkedin.com/in/aghiles-gasselin/}}
+    \hspace{1pt}$|$\hspace{1pt}
+    \faGithub \hspace{2pt} \href{https://github.com/Moa1er}{\texttt{github.com/Moa1er}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------INTRODUCTION-----------
+\section{INTRODUCTION}
+\small{
+Software Engineering graduate and MSc student in Data Science and Artificial Intelligence at TU Delft, specializing in visual computing, advanced machine learning, and generative modeling. I build AI and software systems across embedded C++, data pipelines, .NET, Angular, SQL, and Azure cloud platforms, with experience in applied AI, bioinformatics research, cyber security, and robotics. Full working rights in Europe and Canada.
+}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Delft University of Technology (TU Delft)}{Sep. 2025 -- Jun. 2027}
+      {Master in Data Science and Artificial Intelligence}{Delft, Netherlands}
+      % \resumeItemListStart
+        % \resumeItem{Specialized in \textbf{Visual Computing} and \textbf{Advanced Machine Learning}.}
+        % \resumeItem{Projects spanning computer vision, deep learning, perception, and model evaluation.}
+      % \resumeItemListEnd
+
+    \resumeSubheading
+      {Polytechnic School of Montreal}{Sep. 2019 -- May 2024}
+      {Bachelor in Software Engineering}{Montreal, Canada}
+      % \resumeItemListStart
+        % \resumeItem{Teaching assistant for first-year engineering course in robotics.}
+      %   \resumeItem{Active in aerospace committee \textbf{PolyOrbite} and hacking committee \textbf{PolyHx}.}
+      % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{PROFESSIONAL EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Acquiso inc}{Jan. 2024 -- Aug. 2026}
+      {Full Stack \& AI Engineer}{Montreal, Canada}
+      \resumeItemListStart
+        \resumeItem{Built public-facing marketplace features and internal admin tools using \textbf{Angular}, \textbf{.NET}, \textbf{SQL}, and \textbf{Azure}.}
+        \resumeItem{Integrated AI tools for price prediction, multimodal image recognition, and automated text generation using \textbf{regression models} and \textbf{LLMs.}}
+        \resumeItem{Optimized platform performance through \textbf{EF Core tuning}, \textbf{server-side caching}, \textbf{lazy loading}, and backend query optimizations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Deloitte}{Jun. 2024 -- Jul. 2025}
+      {Analyst -- Cyber Defense \& Data Protection}{Montreal, Canada}
+      \resumeItemListStart
+        \resumeItem{Automated vulnerability intelligence and data gathering using \textbf{XSOAR}, centralizing asset data from \textbf{ServiceNow CMDB} and \textbf{Lansweeper}.}
+        \resumeItem{Developed \textbf{Power BI dashboards} to track security risks and support executive decision-making.}
+        \resumeItem{Led large-scale data discovery using \textbf{BigID} across \textbf{500+ servers} and billions of files to identify sensitive data and define reduction and retention strategies.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Korea Advanced Institute of Science \& Technology}{Aug. 2023 -- Dec. 2023}
+      {Bioinformatics Research Assistant -- Animal Cell Engineering Laboratory}{Daejeon, South Korea}
+      \resumeItemListStart
+        \resumeItem{Analyzed genome-scale \textbf{CRISPR knockout screening data} from CHO cells and processed FASTQ sequencing files using \textbf{MAGeCK-VISPR}.}
+        \resumeItem{Co-authored an article in \textbf{\textit{Scientific Data} (Nature Portfolio)} on genome-scale CRISPR knockout screening of CHO cells findable \href{https://www.nature.com/articles/s41597-025-04438-6}{\myuline{here}}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {LABEO Technologies}{May 2022 -- Aug. 2022}
+      {Software Engineer Intern}{Montreal, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed software using \textbf{Qt/C++} and \textbf{Arduino} to automate technical tasks.}
+        \resumeItem{Applied algorithmic problem-solving to calculate the weight of mice in an automated system.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: Python, C++, C\#, SQL, TypeScript, JavaScript, Java, Bash}\vspace{2pt} \\
+     \textbf{Frameworks \& Libraries} {: .NET, Angular, React, Flutter, Qt, Arduino, EF Core, Power BI}\vspace{2pt} \\
+     \textbf{AI \& Machine Learning} {: PyTorch, TensorFlow, NumPy, Pandas, OpenCV, Hugging Face Transformers, LangChain}\vspace{2pt} \\
+     \textbf{AI Domains} {: Deep Learning, Computer Vision, Gen AI, LLMs, Reinforcement Learning, Model Evaluation, Bioinformatics}\vspace{2pt} \\
+     \textbf{Cloud \& Tools} {: Azure, Git, Jira, JetBrains IDEs, Cursor, XSOAR, ServiceNow CMDB, Lansweeper, BigID}\vspace{2pt} \\
+     \textbf{Cyber Security} {: Vulnerability Intelligence, Data Discovery, Data Protection, Retention Strategy, CTF Experience}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://github.com/Moa1er/Football-Winners}{\textbf{Multi-Camera Multi-Object Tracking for Amateur Football Analytics -- \faGithub}}}{}
+      \resumeItemListStart
+        \resumeItem{Built a computer vision pipeline to extract player and ball trajectories from \textbf{two synchronized amateur football camera views}.}
+        \resumeItem{Fine-tuned \textbf{YOLO26x} on manually labeled football footage using \textbf{Roboflow} and \textbf{Albumentations}, improving small-ball detection under blur and occlusion.}
+        \resumeItem{Implemented field registration with \textbf{lens distortion correction}, \textbf{manual point matching}, \textbf{homography estimation}, and reprojection verification using \textbf{OpenCV}.}
+        \resumeItem{Combined ByteTrack-based tracking with \textbf{cross-camera fusion}, \textbf{Hungarian matching}, global player IDs, and recovery logic in shared pitch coordinates.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/Moa1er/C-JEPA-Reproduction}{\textbf{Causal JEPA Paper Reproduction -- Object-Centric World Model based on JEPA -- \faGithub}}}{}
+      \resumeItemListStart
+        \resumeItem{Implementing \textbf{latent-space object masking} from scratch, forcing the model to predict masked object states.}
+        \resumeItem{Analyzing how \textbf{object-level masking} affects interaction reasoning, temporal prediction, and \textbf{world-model learning}.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/Moa1er/FoCAL-reproduction}{\textbf{FoCAL Paper Reproduction -- Prior-Regularized Learned Canonicalization -- \faGithub}}}{}
+      \resumeItemListStart
+        \resumeItem{Training \textbf{PRLC} models for both \textbf{ResNet50} and \textbf{ViT}, comparing robustness and classification behavior under \textbf{learned canonicalization}.}
+        \resumeItem{Extending the project with \textbf{hyperparameter ablation studies} and experiments fitting a \textbf{Spatial Transformer Network (STN)} on top of the PRLC pipeline.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------HOBBIES AND LANGUAGES-----------
+\section{HOBBIES \& LANGUAGES}
+
+\begin{minipage}[t]{0.48\textwidth}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Hobbies} \vspace{2pt} \\
+     Music: Guitar for 8 years and piano for 3 years \\
+     Drone FPV: Building and flying first-person-view drones \\
+     Chess and board games
+    }}
+ \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} \vspace{2pt} \\
+     French: Native \\
+     English: Bilingual, C2 \\
+     Korean: Basic, A2
+    }}
+ \end{itemize}
+\end{minipage}
+
+%-------------------------------------------
+\end{document}
