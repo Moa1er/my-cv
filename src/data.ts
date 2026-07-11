@@ -120,34 +120,3 @@ export const projects: Project[] = [
     visual: "focal",
   },
 ];
-
-export const capabilities = [
-  {
-    id: "vision",
-    name: "Visual intelligence",
-    headline: "Pixels into decisions.",
-    copy: "Detection, tracking, field registration, multimodal recognition, and models that learn structure—not shortcuts.",
-    tools: ["PyTorch", "OpenCV", "TensorFlow", "YOLO", "Transformers"],
-  },
-  {
-    id: "systems",
-    name: "Software systems",
-    headline: "Prototype to production.",
-    copy: "Full-stack products, tuned data access, cloud delivery, and embedded code that crosses into the physical world.",
-    tools: ["Python", "C++", "C#", ".NET", "Angular", "SQL", "Azure"],
-  },
-  {
-    id: "security",
-    name: "Cyber + data",
-    headline: "Find the signal in scale.",
-    copy: "Vulnerability intelligence and sensitive-data discovery across complex estates with executive-grade reporting.",
-    tools: ["XSOAR", "BigID", "Power BI", "ServiceNow", "Lansweeper"],
-  },
-  {
-    id: "research",
-    name: "Research",
-    headline: "Reproduce. Question. Extend.",
-    copy: "Paper reproduction, model evaluation, bioinformatics, and experiments designed to expose how a system really behaves.",
-    tools: ["NumPy", "Pandas", "Hugging Face", "MAGeCK-VISPR", "Ablations"],
-  },
-];

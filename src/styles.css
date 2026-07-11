@@ -251,10 +251,10 @@ button {
 
 .hero h1 {
   margin: 0;
-  max-width: 1080px;
-  font-size: clamp(3.7rem, 9.8vw, 10rem);
-  line-height: 0.82;
-  letter-spacing: -0.085em;
+  max-width: 1040px;
+  font-size: clamp(3.4rem, 7.4vw, 7.8rem);
+  line-height: 0.86;
+  letter-spacing: -0.078em;
   font-weight: 600;
 }
 
@@ -283,18 +283,19 @@ button {
 }
 
 .hero-lower {
-  width: min(92%, 850px);
-  margin-top: 2.4rem;
+  width: min(100%, 610px);
+  margin-top: 1.8rem;
   display: flex;
-  align-items: flex-end;
-  gap: clamp(2rem, 7vw, 7rem);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.35rem;
 }
 
 .hero-lower > p {
-  max-width: 490px;
+  max-width: 610px;
   margin: 0;
   color: rgba(241, 240, 235, 0.68);
-  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
   line-height: 1.45;
 }
 
@@ -432,7 +433,7 @@ button {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.manifesto,
+.facts,
 .projects,
 .experience,
 .education,
@@ -441,7 +442,8 @@ button {
   padding-block: clamp(7rem, 13vw, 13rem);
 }
 
-.manifesto {
+.facts {
+  padding-block: clamp(2.5rem, 5vw, 5rem) clamp(5rem, 9vw, 8rem);
   border-top: 1px solid var(--line-dark);
 }
 
@@ -458,28 +460,6 @@ button {
   color: var(--acid);
 }
 
-.manifesto-text {
-  max-width: 1200px;
-  margin: clamp(3rem, 7vw, 6rem) 0;
-  font-size: clamp(2.1rem, 5.2vw, 5.3rem);
-  line-height: 1.03;
-  letter-spacing: -0.06em;
-  color: rgba(241, 240, 235, 0.33);
-}
-
-.manifesto-text button {
-  padding: 0;
-  color: var(--paper);
-  background: transparent;
-  border-bottom: 0.06em solid var(--acid);
-  cursor: pointer;
-  transition: color 180ms ease;
-}
-
-.manifesto-text button:hover {
-  color: var(--acid);
-}
-
 .signal-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -488,8 +468,8 @@ button {
 }
 
 .signal-strip div {
-  min-height: 9rem;
-  padding: 1.6rem;
+  min-height: 7rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -501,7 +481,7 @@ button {
 }
 
 .signal-strip strong {
-  font-size: clamp(2rem, 4vw, 4.4rem);
+  font-size: clamp(1.8rem, 3vw, 3.3rem);
   font-weight: 500;
   letter-spacing: -0.07em;
 }
@@ -517,7 +497,7 @@ button {
   color: var(--ink);
   background: var(--paper);
   width: 100%;
-  padding-inline: max(1.5rem, calc((100vw - 1440px) / 2));
+  padding: clamp(6rem, 10vw, 9rem) max(1.5rem, calc((100vw - 1440px) / 2));
 }
 
 .projects::before {
@@ -530,9 +510,9 @@ button {
 }
 
 .section-heading {
-  margin-bottom: clamp(4rem, 8vw, 8rem);
+  margin-bottom: clamp(3rem, 5vw, 5rem);
   display: grid;
-  grid-template-columns: 0.65fr 1.35fr 0.8fr;
+  grid-template-columns: 0.5fr 1.5fr;
   align-items: end;
   gap: 2rem;
 }
@@ -550,7 +530,7 @@ button {
 .offscreen h2,
 .footer h2 {
   margin: 0;
-  font-size: clamp(3.3rem, 7vw, 7.5rem);
+  font-size: clamp(3rem, 5.7vw, 6rem);
   line-height: 0.83;
   letter-spacing: -0.08em;
   font-weight: 600;
@@ -571,6 +551,9 @@ button {
 }
 
 .project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   perspective: 1000px;
 }
 
@@ -580,9 +563,9 @@ button {
   --mx: 50%;
   --my: 50%;
   position: relative;
-  min-height: 590px;
-  margin-bottom: 2rem;
-  padding: clamp(1.3rem, 3vw, 3rem);
+  min-height: 680px;
+  margin: 0;
+  padding: clamp(1.1rem, 1.7vw, 1.6rem);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -617,32 +600,32 @@ button {
 
 .project-grid {
   flex: 1;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(3rem, 7vw, 8rem);
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  padding-block: 1.35rem;
 }
 
 .project-copy h3 {
   max-width: 720px;
-  margin: 0 0 1.5rem;
-  font-size: clamp(2.5rem, 5.5vw, 6rem);
-  line-height: 0.93;
-  letter-spacing: -0.07em;
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 2.9vw, 3.35rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
   font-weight: 500;
 }
 
 .project-lead {
   max-width: 620px;
-  margin: 0 0 1.5rem;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  margin: 0 0 1rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
   line-height: 1.45;
 }
 
 .project-copy ul,
 .timeline-main ul {
   max-width: 650px;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   padding: 0;
   list-style: none;
   color: rgba(10, 10, 10, 0.62);
@@ -651,9 +634,13 @@ button {
 .project-copy li,
 .timeline-main li {
   position: relative;
-  margin-top: 0.65rem;
+  margin-top: 0.5rem;
   padding-left: 1.2rem;
-  line-height: 1.45;
+  line-height: 1.4;
+}
+
+.project-copy li {
+  font-size: 0.82rem;
 }
 
 .project-copy li::before,
@@ -697,8 +684,9 @@ button {
 }
 
 .project-visual {
+  order: -1;
   position: relative;
-  aspect-ratio: 1.35;
+  aspect-ratio: 1.55;
   overflow: hidden;
   border: 1px solid rgba(10, 10, 10, 0.25);
   background: var(--ink);
@@ -848,9 +836,10 @@ button {
 }
 
 .experience {
+  padding-block: clamp(6rem, 10vw, 9rem);
   display: grid;
-  grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.7fr);
-  gap: clamp(3rem, 8vw, 9rem);
+  grid-template-columns: minmax(210px, 0.55fr) minmax(0, 1.7fr);
+  gap: clamp(3rem, 6vw, 6rem);
 }
 
 .experience-intro {
@@ -860,11 +849,11 @@ button {
 }
 
 .experience .section-kicker {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .experience h2 {
-  font-size: clamp(3.3rem, 6vw, 6.5rem);
+  font-size: clamp(3rem, 4.5vw, 4.8rem);
 }
 
 .experience-intro > p:last-child {
@@ -888,15 +877,15 @@ button {
 
 .timeline-item {
   position: relative;
-  padding: 0 0 clamp(6rem, 10vw, 10rem) 5rem;
+  padding: 0 0 clamp(3.5rem, 6vw, 5.5rem) 4.5rem;
 }
 
 .timeline-marker {
   position: absolute;
   left: 0;
   top: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
   display: grid;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -923,10 +912,10 @@ button {
 }
 
 .timeline-main {
-  padding-top: 1.6rem;
+  padding-top: 1.25rem;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .timeline-signal {
@@ -939,7 +928,7 @@ button {
 
 .timeline h3 {
   margin: 0;
-  font-size: clamp(2rem, 3.8vw, 4rem);
+  font-size: clamp(1.8rem, 2.7vw, 2.9rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
@@ -952,6 +941,7 @@ button {
 .timeline-main ul {
   margin-top: 0;
   color: rgba(241, 240, 235, 0.58);
+  font-size: 0.86rem;
 }
 
 .timeline-main li::before {
@@ -966,7 +956,7 @@ button {
 .paper-callout {
   grid-column: 2;
   position: relative;
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.25rem, 2vw, 2rem);
   display: grid;
   grid-template-columns: 0.6fr 1.2fr auto;
   gap: 2rem;
@@ -991,196 +981,13 @@ button {
 }
 
 .paper-callout strong {
-  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
   font-weight: 500;
 }
 
 .paper-callout b {
   font-family: var(--mono);
   font-size: 0.62rem;
-}
-
-.capabilities {
-  width: 100%;
-  padding: clamp(7rem, 13vw, 13rem) max(1.5rem, calc((100vw - 1440px) / 2));
-  color: var(--paper);
-  background: #151419;
-  border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
-}
-
-.section-heading--light .section-kicker {
-  color: rgba(241, 240, 235, 0.5);
-}
-
-.section-heading--light h2 em {
-  -webkit-text-stroke-color: var(--paper);
-}
-
-.capability-console {
-  min-height: 560px;
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  border: 1px solid var(--line-dark);
-}
-
-.capability-tabs {
-  border-right: 1px solid var(--line-dark);
-}
-
-.capability-tabs button {
-  width: 100%;
-  min-height: 25%;
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 3rem 1fr auto;
-  align-items: center;
-  gap: 0.8rem;
-  border-bottom: 1px solid var(--line-dark);
-  color: rgba(241, 240, 235, 0.5);
-  background: transparent;
-  text-align: left;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  cursor: pointer;
-  transition: color 180ms ease, background-color 180ms ease;
-}
-
-.capability-tabs button:last-child {
-  border-bottom: 0;
-}
-
-.capability-tabs button span {
-  color: var(--acid);
-  font-family: var(--mono);
-  font-size: 0.56rem;
-}
-
-.capability-tabs button b {
-  opacity: 0;
-  transform: translate(-0.3rem, 0.3rem);
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.capability-tabs button[aria-selected="true"] {
-  color: var(--ink);
-  background: var(--acid);
-}
-
-.capability-tabs button[aria-selected="true"] span {
-  color: var(--ink);
-}
-
-.capability-tabs button[aria-selected="true"] b {
-  opacity: 1;
-  transform: none;
-}
-
-.capability-display {
-  position: relative;
-  min-height: 560px;
-  padding: clamp(2rem, 5vw, 5rem);
-  overflow: hidden;
-}
-
-.capability-display > p:first-child {
-  margin: 0 0 5rem;
-  font-size: 0.58rem;
-  color: rgba(241, 240, 235, 0.44);
-}
-
-.capability-display > p:first-child span {
-  color: var(--acid);
-}
-
-.capability-display h3 {
-  position: relative;
-  z-index: 2;
-  max-width: 750px;
-  margin: 0;
-  font-size: clamp(3rem, 6vw, 7rem);
-  line-height: 0.9;
-  letter-spacing: -0.075em;
-  font-weight: 500;
-}
-
-.capability-display > p:nth-of-type(2) {
-  position: relative;
-  z-index: 2;
-  max-width: 630px;
-  margin: 2rem 0;
-  color: rgba(241, 240, 235, 0.55);
-  line-height: 1.55;
-}
-
-.capability-tools {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.capability-tools span {
-  padding: 0.55rem 0.75rem;
-  border: 1px solid var(--line-dark);
-  border-radius: 999px;
-  font-family: var(--mono);
-  font-size: 0.58rem;
-}
-
-.scope {
-  position: absolute;
-  right: -10%;
-  bottom: -25%;
-  width: min(38vw, 500px);
-  aspect-ratio: 1;
-  border: 1px solid rgba(216, 255, 62, 0.15);
-  border-radius: 50%;
-  animation: scope-rotate 20s linear infinite;
-}
-
-.scope::before,
-.scope::after {
-  content: "";
-  position: absolute;
-  background: rgba(216, 255, 62, 0.13);
-}
-
-.scope::before {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-}
-
-.scope::after {
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-}
-
-.scope i {
-  position: absolute;
-  inset: calc(var(--n, 1) * 10%);
-  border: 1px solid rgba(216, 255, 62, 0.11);
-  border-radius: 50%;
-}
-
-.scope i:nth-child(1) { --n: 1; }
-.scope i:nth-child(2) { --n: 2; }
-.scope i:nth-child(3) { --n: 3; }
-.scope i:nth-child(4) { --n: 4; }
-
-.scope b {
-  position: absolute;
-  left: 66%;
-  top: 30%;
-  width: 0.6rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--acid);
-  box-shadow: 0 0 1.2rem var(--acid);
 }
 
 .education {
@@ -1594,7 +1401,6 @@ button {
 @keyframes player-drift { to { transform: translate(1.1rem, -0.7rem); } }
 @keyframes latent-pulse { 50% { border-color: var(--acid); background: rgba(216, 255, 62, 0.15); } }
 @keyframes canonicalize { to { transform: rotate(4deg) skewX(0); } }
-@keyframes scope-rotate { to { transform: rotate(360deg); } }
 @keyframes wave { to { transform: scaleY(0.28); opacity: 0.45; } }
 @keyframes drone-float { 50% { transform: translate(-50%, -0.7rem) rotate(5deg); } }
 @keyframes rotor { to { transform: rotate(360deg); } }
@@ -1605,12 +1411,13 @@ button {
   .section-heading { grid-template-columns: 1fr 2fr; }
   .section-heading > p:last-child { display: none; }
   .hero-orbit { opacity: 0.35; right: -12vw; }
-  .project-grid { grid-template-columns: 1fr; gap: 2rem; padding-block: 2rem; }
+  .project-list { grid-template-columns: 1fr; }
+  .project-card { min-height: 0; }
+  .project-grid { gap: 1.5rem; padding-block: 1.5rem; }
   .project-visual { max-width: 600px; width: 100%; }
   .experience { grid-template-columns: 1fr; }
   .experience-intro { position: static; }
   .paper-callout { grid-column: 1; }
-  .capability-console { grid-template-columns: 0.85fr 1.15fr; }
   .education-grid { grid-template-columns: 1fr 1fr; }
   .education-grid > div:first-child { grid-column: 1 / -1; min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .offscreen-grid { grid-template-columns: 1fr 1fr; }
@@ -1623,12 +1430,11 @@ button {
   .command-trigger span { display: none; }
   .hero { padding-top: 7rem; }
   .hero-status span:last-child { display: none; }
-  .hero h1 { font-size: clamp(3.4rem, 17.2vw, 6.3rem); line-height: 0.86; }
+  .hero h1 { font-size: clamp(3.15rem, 14.8vw, 5.5rem); line-height: 0.88; }
   .hero h1 > span:first-child { white-space: normal; }
   .hero-lower { width: 100%; margin-top: 2rem; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   .hero-actions { width: 100%; align-items: flex-start; flex-direction: column; }
   .hero-orbit { width: 75vw; right: -32vw; top: 39%; }
-  .manifesto-text { font-size: clamp(2rem, 10vw, 3.5rem); }
   .signal-strip { grid-template-columns: 1fr 1fr; }
   .signal-strip div:nth-child(2) { border-right: 0; }
   .signal-strip div:nth-child(-n + 2) { border-bottom: 1px solid var(--line-dark); }
@@ -1644,15 +1450,6 @@ button {
   .timeline-main { grid-template-columns: 1fr; }
   .timeline-top { flex-direction: column; gap: 0.5rem; }
   .paper-callout { grid-template-columns: 1fr; }
-  .capability-console { display: block; }
-  .capability-tabs { display: grid; grid-template-columns: 1fr 1fr; border-right: 0; }
-  .capability-tabs button { min-height: 100px; grid-template-columns: 1fr; border-right: 1px solid var(--line-dark); font-size: 0.92rem; }
-  .capability-tabs button:nth-child(even) { border-right: 0; }
-  .capability-tabs button b { display: none; }
-  .capability-display { min-height: 510px; padding: 1.5rem; }
-  .capability-display > p:first-child { margin-bottom: 4rem; }
-  .capability-display h3 { font-size: clamp(3.4rem, 15vw, 5.4rem); }
-  .scope { width: 90vw; }
   .education-grid { grid-template-columns: 1fr; }
   .education-grid > * { min-height: 340px; border-right: 0; border-bottom: 1px solid var(--line); }
   .offscreen-title { grid-template-columns: 1fr; }
@@ -1690,14 +1487,12 @@ button {
   .command-menu,
   .offscreen,
   .footer-bottom,
-  .project-visual,
-  .scope {
+  .project-visual {
     display: none !important;
   }
 
   body,
   .projects,
-  .capabilities,
   .education,
   .footer {
     color: #000;
@@ -1708,8 +1503,8 @@ button {
   .hero h1 { font-size: 4rem; }
   .section-shell { width: 100%; padding: 2rem 0; }
   .project-card { min-height: auto; break-inside: avoid; }
+  .project-list { grid-template-columns: 1fr; }
   .project-grid, .experience, .timeline-main { display: block; }
   .experience-intro { position: static; }
-  .capability-console { display: none; }
   a { color: #000; }
 }

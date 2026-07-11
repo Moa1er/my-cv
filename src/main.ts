@@ -1,5 +1,5 @@
 import "./styles.css";
-import { capabilities, experiences, projects } from "./data";
+import { experiences, projects } from "./data";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 
@@ -43,7 +43,6 @@ app.innerHTML = `
     <nav aria-label="Primary navigation">
       <a href="#work">Work</a>
       <a href="#experience">Timeline</a>
-      <a href="#capabilities">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="command-trigger magnetic" type="button" aria-label="Open quick navigation" aria-haspopup="dialog">
@@ -54,7 +53,7 @@ app.innerHTML = `
   <main id="top">
     <section class="hero section-shell" aria-labelledby="hero-title">
       <div class="hero-status mono reveal">
-        <span><i></i> Available for ambitious systems</span>
+        <span><i></i> EU + Canada work rights</span>
         <span>Delft, NL · 52.01° N</span>
       </div>
 
@@ -65,7 +64,7 @@ app.innerHTML = `
           <span>THAT <em id="hero-verb">SEE</em><b>.</b></span>
         </h1>
         <div class="hero-lower reveal">
-          <p>From model internals to production edges. I turn complex signals into software that works.</p>
+          <p>MSc AI @ TU Delft. Full-stack systems, computer vision, and data security.</p>
           <div class="hero-actions">
             <a class="button button--primary magnetic" href="#work">Explore work <span>↘</span></a>
             <a class="text-link magnetic" href="mailto:aghiles.gasselin@gmail.com">Start a conversation <span>↗</span></a>
@@ -84,31 +83,23 @@ app.innerHTML = `
       <div class="hero-index mono reveal">
         <span>Scroll to decode</span>
         <div></div>
-        <span>01 — 06</span>
+        <span>01 — 04</span>
       </div>
     </section>
 
-    <section class="manifesto section-shell" aria-label="Profile">
-      <p class="section-kicker reveal"><span>01</span> Operating range</p>
-      <p class="manifesto-text reveal">
-        I move between <button data-capability="vision">vision models</button>,
-        <button data-capability="systems">software systems</button>,
-        <button data-capability="security">cyber-scale data</button>, and
-        <button data-capability="research">research</button>—because the hard problems live between disciplines.
-      </p>
-      <div class="signal-strip reveal" aria-label="Selected facts">
+    <section class="facts section-shell" aria-label="Selected facts">
+      <div class="signal-strip reveal">
         <div><strong data-count="500">0</strong><span>+ servers mapped</span></div>
-        <div><strong>3</strong><span>countries worked in</span></div>
-        <div><strong>1</strong><span>Nature Portfolio paper</span></div>
-        <div><strong>8</strong><span>years playing guitar</span></div>
+        <div><strong>3</strong><span>countries</span></div>
+        <div><strong>1</strong><span>Nature paper</span></div>
+        <div><strong>4</strong><span>engineering domains</span></div>
       </div>
     </section>
 
     <section id="work" class="projects section-shell" aria-labelledby="work-title">
       <div class="section-heading reveal">
-        <p class="section-kicker"><span>02</span> Selected experiments</p>
+        <p class="section-kicker"><span>01</span> Selected work</p>
         <h2 id="work-title">Work with<br><em>teeth.</em></h2>
-        <p>Built to test an idea, survive contact with data, and expose what happens next.</p>
       </div>
       <div class="project-list">
         ${projects
@@ -139,9 +130,8 @@ app.innerHTML = `
 
     <section id="experience" class="experience section-shell" aria-labelledby="experience-title">
       <div class="experience-intro reveal">
-        <p class="section-kicker"><span>03</span> Field log</p>
-        <h2 id="experience-title">Different arenas.<br>Same instinct.</h2>
-        <p>Find the system. Understand the constraints. Improve the outcome.</p>
+        <p class="section-kicker"><span>02</span> Work history</p>
+        <h2 id="experience-title">Experience.</h2>
       </div>
       <div class="timeline">
         ${experiences
@@ -174,36 +164,8 @@ app.innerHTML = `
       </a>
     </section>
 
-    <section id="capabilities" class="capabilities section-shell" aria-labelledby="capabilities-title">
-      <div class="section-heading section-heading--light reveal">
-        <p class="section-kicker"><span>04</span> Capability matrix</p>
-        <h2 id="capabilities-title">Wide stack.<br><em>Sharp edge.</em></h2>
-      </div>
-      <div class="capability-console reveal">
-        <div class="capability-tabs" role="tablist" aria-label="Capability areas">
-          ${capabilities
-            .map(
-              (capability, index) => `
-            <button id="tab-${capability.id}" role="tab" aria-selected="${index === 0}" aria-controls="panel-capability" data-capability="${capability.id}">
-              <span>${String(index + 1).padStart(2, "0")}</span>${capability.name}<b>↗</b>
-            </button>`,
-            )
-            .join("")}
-        </div>
-        <div id="panel-capability" class="capability-display" role="tabpanel" aria-live="polite">
-          <p class="mono">CURRENT SIGNAL / <span id="capability-id">VISION</span></p>
-          <h3 id="capability-headline">${capabilities[0].headline}</h3>
-          <p id="capability-copy">${capabilities[0].copy}</p>
-          <div id="capability-tools" class="capability-tools">
-            ${capabilities[0].tools.map((tool) => `<span>${tool}</span>`).join("")}
-          </div>
-          <div class="scope" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
-        </div>
-      </div>
-    </section>
-
     <section class="education section-shell" aria-labelledby="education-title">
-      <p class="section-kicker reveal"><span>05</span> Learning loop</p>
+      <p class="section-kicker reveal"><span>03</span> Education</p>
       <div class="education-grid">
         <div class="reveal">
           <h2 id="education-title">Still<br>loading.</h2>
@@ -225,7 +187,7 @@ app.innerHTML = `
 
     <section class="offscreen section-shell" aria-labelledby="offscreen-title">
       <div class="offscreen-title reveal">
-        <p class="section-kicker"><span>06</span> Outside the viewport</p>
+        <p class="section-kicker"><span>04</span> Outside work</p>
         <h2 id="offscreen-title">Human,<br>not a model.</h2>
       </div>
       <div class="offscreen-grid">
@@ -269,8 +231,7 @@ app.innerHTML = `
     <nav>
       <a href="#work"><span>01</span>Selected work <kbd>W</kbd></a>
       <a href="#experience"><span>02</span>Experience <kbd>E</kbd></a>
-      <a href="#capabilities"><span>03</span>Capabilities <kbd>S</kbd></a>
-      <a href="#contact"><span>04</span>Contact <kbd>C</kbd></a>
+      <a href="#contact"><span>03</span>Contact <kbd>C</kbd></a>
     </nav>
     <small class="mono">ESC TO CLOSE</small>
   </dialog>
@@ -316,36 +277,6 @@ const setupHeroWords = () => {
   }, 2300);
 };
 
-const setupCapabilityConsole = () => {
-  const buttons = document.querySelectorAll<HTMLButtonElement>("[data-capability]");
-  const id = document.querySelector<HTMLElement>("#capability-id");
-  const headline = document.querySelector<HTMLElement>("#capability-headline");
-  const copy = document.querySelector<HTMLElement>("#capability-copy");
-  const tools = document.querySelector<HTMLElement>("#capability-tools");
-  if (!id || !headline || !copy || !tools) return;
-
-  const select = (capabilityId: string) => {
-    const capability = capabilities.find((item) => item.id === capabilityId);
-    if (!capability) return;
-    document.querySelectorAll<HTMLButtonElement>(".capability-tabs button").forEach((button) => {
-      button.setAttribute("aria-selected", String(button.dataset.capability === capabilityId));
-    });
-    id.textContent = capability.id.toUpperCase();
-    headline.textContent = capability.headline;
-    copy.textContent = capability.copy;
-    tools.innerHTML = capability.tools.map((tool) => `<span>${tool}</span>`).join("");
-  };
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      select(button.dataset.capability ?? "vision");
-      if (!button.closest(".capability-tabs")) {
-        document.querySelector("#capabilities")?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
-      }
-    });
-  });
-};
-
 const setupCommandMenu = () => {
   const dialog = document.querySelector<HTMLDialogElement>(".command-menu");
   const trigger = document.querySelector<HTMLButtonElement>(".command-trigger");
@@ -358,7 +289,7 @@ const setupCommandMenu = () => {
       event.preventDefault();
       open();
     }
-    const shortcuts: Record<string, string> = { w: "#work", e: "#experience", s: "#capabilities", c: "#contact" };
+    const shortcuts: Record<string, string> = { w: "#work", e: "#experience", c: "#contact" };
     if (dialog.open && shortcuts[event.key.toLowerCase()]) {
       dialog.close();
       document.querySelector(shortcuts[event.key.toLowerCase()])?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
@@ -514,7 +445,6 @@ const setupScroll = () => {
 document.querySelector<HTMLButtonElement>("#print-cv")?.addEventListener("click", () => window.print());
 setupReveal();
 setupHeroWords();
-setupCapabilityConsole();
 setupCommandMenu();
 setupPointerEffects();
 setupCanvas();
