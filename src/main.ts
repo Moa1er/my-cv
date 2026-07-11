@@ -98,8 +98,8 @@ app.innerHTML = `
 
     <section id="work" class="projects section-shell" aria-labelledby="work-title">
       <div class="section-heading reveal">
-        <p class="section-kicker"><span>01</span> Selected work</p>
-        <h2 id="work-title">Work with<br><em>teeth.</em></h2>
+        <p class="section-kicker"><span>01</span> Projects</p>
+        <h2 id="work-title">Selected<br><em>work.</em></h2>
       </div>
       <div class="project-list">
         ${projects
