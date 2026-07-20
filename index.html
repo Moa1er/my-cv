@@ -14,6 +14,20 @@
       content="I build systems that see, reason, and ship. Explore selected work, research, and experience."
     />
     <meta property="og:type" content="website" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("cv-theme");
+          const theme = savedTheme === "light" || savedTheme === "dark"
+            ? savedTheme
+            : "light";
+          document.documentElement.dataset.theme = theme;
+          document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#101113" : "#faf9f6");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
